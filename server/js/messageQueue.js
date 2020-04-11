@@ -7,5 +7,13 @@ module.exports.enqueue = (message) => {
 
 module.exports.dequeue = () => {
   // returns undefined if messages array is empty
+  console.log(messages);
   return messages.shift();
 };
+
+
+// initialize((message) => {
+//   enqueue(message)
+// });
+
+// messages = ['up', 'down']
