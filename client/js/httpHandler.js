@@ -24,10 +24,32 @@
   //   SwimTeam.move(data);
   // });
 
-  setInterval(() => getSwimMove((data) => {
-    console.log(data);
-    SwimTeam.move(data);
-  }), 500);
+  // setInterval(() => getSwimMove((data) => {
+  //   console.log(data);
+  //   SwimTeam.move(data);
+  // }), 500);
+
+
+ const getBackgroundImage = (successCB = null, errorCB = null) => {
+    $.ajax({
+      method: 'GET',
+      url: serverUrl + '/background.jpg',
+      contentType: 'image.jpg',
+      success: successCB,
+      error: errorCB || function() {
+        console.log('request unsuccessful');
+      }
+    });
+  };
+
+
+  // getBackgroundImage((data) => {
+  //   debugger;
+  //   console.log(data);
+  //   $('.pool').css('background-image', `url(http://127.0.0.1:3000/spec/water-lg.jpg)`);
+  // });
+
+  // background-image: url(data:png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAA
 
   /////////////////////////////////////////////////////////////////////
   // The ajax file uplaoder is provided for your convenience!

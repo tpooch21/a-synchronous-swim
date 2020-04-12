@@ -40,6 +40,8 @@ describe('server responses', () => {
       expect(res._ended).to.equal(true);
       done();
     });
+
+
   });
 
   xit('should respond with 200 to a GET request for a present background image', (done) => {
